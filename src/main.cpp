@@ -3,17 +3,17 @@
 #include <unistd.h>
 #include <stdio.h>
 // CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-#include <opencv2/opencv.hpp>
-#include <opencv2/mcc/ccm.hpp>
+// #include <opencv2/opencv.hpp>
+// #include <opencv2/mcc/ccm.hpp>
 #include <QDebug>
 #include "gui/mainWidget.h"
-#include "ScreenCapture.h"
-#include "ScreenCapture_C_API.h"
+// #include "ScreenCapture.h"
+// #include "ScreenCapture_C_API.h"
 #include "utilities/colorSpace.h"
 
 
 using namespace std;
-using namespace cv;
+// using namespace cv;
 
 int main(int argc, char *argv[])
 {

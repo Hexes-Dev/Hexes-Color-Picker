@@ -13,7 +13,7 @@ class ColorPreviewWidget : public QWidget
 
     public:
         explicit ColorPreviewWidget(QWidget *parent = 0);
-        ColorPreviewWidget(std::vector<QColor> *colors, QWidget *parent = 0);
+        ColorPreviewWidget(QColor color, QWidget *parent = 0);
         ~ColorPreviewWidget();
         void setColorList(std::vector<QColor> *colors);
         void setColor(QColor color);

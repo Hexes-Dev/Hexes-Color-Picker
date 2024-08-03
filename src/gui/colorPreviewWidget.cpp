@@ -54,13 +54,10 @@ ColorPreviewWidget::ColorPreviewWidget(QWidget *parent) :
     
 }
 
-ColorPreviewWidget::ColorPreviewWidget(std::vector<QColor> *colors, QWidget *parent) : 
+ColorPreviewWidget::ColorPreviewWidget(QColor color, QWidget *parent) : 
     ColorPreviewWidget(parent)
 {
-    setColorList(colors);
-
-    setStyleSheet(QString::fromLatin1(".color-swatch {background-color: %1}").arg(colors->at(0).name()));
-    update();
+    setColor(color);
 }
 
 

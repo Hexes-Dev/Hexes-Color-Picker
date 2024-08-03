@@ -34,27 +34,29 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 set(BUILD_EXAMPLE false)
 # set(BUILD_SHARED_LIBS OFF)
 
-include(FetchContent)
-set(SCREEN_CAPTURE_LITE_VERSION 17.1.1369)
-FetchContent_Declare(
-    screen_capture_lite
-    URL https://github.com/smasherprog/screen_capture_lite/archive/refs/tags/${SCREEN_CAPTURE_LITE_VERSION}.tar.gz
-)
+# Screen capture lite is no longer being used in this project.
 
-FetchContent_MakeAvailable(screen_capture_lite)
+# include(FetchContent)
+# set(SCREEN_CAPTURE_LITE_VERSION 17.1.1369)
+# FetchContent_Declare(
+#     screen_capture_lite
+#     URL https://github.com/smasherprog/screen_capture_lite/archive/refs/tags/${SCREEN_CAPTURE_LITE_VERSION}.tar.gz
+# )
+
+# FetchContent_MakeAvailable(screen_capture_lite)
 
 # include_directories (${CMAKE_SOURCE_DIR}/src)
-include_directories(${screen_capture_lite_SOURCE_DIR}/include)
+# include_directories(${screen_capture_lite_SOURCE_DIR}/include)
 # file(COPY ${CMAKE_SOURCE_DIR}/src/assets DESTINATION ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.app/Contents)
 
 find_package(Qt6 COMPONENTS REQUIRED Widgets Gui)
-find_package(OpenCV REQUIRED)
+# find_package(OpenCV REQUIRED)
 
 qt_standard_project_setup()
 
 target_link_libraries(${PROJECT_NAME} 
     ${OpenCV_LIBS}
-    screen_capture_lite_shared
+    # screen_capture_lite_shared
     Qt6::Widgets 
     Qt6::Core
     Qt6::Gui

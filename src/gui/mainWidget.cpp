@@ -3,6 +3,7 @@
 #include "mainWidget.h"
 #include "colorFinderWidget.h"
 #include "widgetFactory.h"
+#include "../utilities/colorSpace.h"
 
 
 // Constructor for main window
@@ -36,7 +37,7 @@ MainWidget::MainWidget(QWidget *parent) :
 
     // SUBLAYOUT
     // Color Preview
-    colorPreview_ = new ColorPreviewWidget(&colorList);
+    colorPreview_ = new ColorPreviewWidget(getColorOfTheDay());
     
 
     // ScreenCapture *sc = new ScreenCapture();
