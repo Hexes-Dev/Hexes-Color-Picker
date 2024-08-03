@@ -1,0 +1,40 @@
+QPushButton.action-button {
+    /* border: 1px solid rgba(128,128,128,0.5); */
+    border-radius: 8px;
+    padding: 4px;
+    background-color: rgba(128,128,128,0.125);
+    font-size: 14px;
+}
+
+QPushButton.action-button:hover {
+    background-color: rgba(128,128,128,0.25);
+}
+
+QPushButton.action-button:pressed {
+    background-color: rgba(128,128,128,0.5);
+}
+
+QPushButton.action-button.transparent {
+    background-color: rgba(0,0,0,0);
+}
+
+QPushButton.action-button.transparent:hover {
+    background-color: rgba(128,128,128,0.25);
+}
+
+QPushButton.action-button.transparent:pressed {
+    background-color: rgba(128,128,128,0.5);
+}
+
+QLabel.color-swatch {
+    border-radius: 8px;
+}
+
+QLineEdit.readout {
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    margin-left: 0px;
+    color: #CECECE;
+    font-size: 14px;
+}

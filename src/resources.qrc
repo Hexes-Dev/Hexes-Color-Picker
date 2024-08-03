@@ -1,0 +1,17 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>assets/style.qss</file>
+
+    <file>assets/icons/light/color_picker.svg</file>
+    <file>assets/icons/light/palette.svg</file>
+    <file>assets/icons/light/square.svg</file>
+    <file>assets/icons/light/copy.svg</file>
+
+    <file>assets/icons/dark/color_picker.svg</file>
+    <file>assets/icons/dark/palette.svg</file>
+    <file>assets/icons/dark/square.svg</file>
+    <file>assets/icons/dark/copy.svg</file>
+
+    <file>assets/colors.json</file>
+</qresource>
+</RCC>
