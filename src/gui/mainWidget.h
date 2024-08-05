@@ -27,8 +27,6 @@ public:
     void returnColor(QColor color);
 
 private slots:
-    void onButtonReleased(); // Handler for button presses
-    void onCaptureProcessOutput(); // Handler for Process output
     void onSelectColorButtonRelease();
     void setColor();
 
@@ -40,9 +38,6 @@ protected:
 
 private:
     QPoint oldPos;
-    QPushButton* button_;
-    QTextBrowser* textBrowser_;
-    QLabel* imagePreview_;
     ColorPreviewWidget* colorPreview_;
     QProcess process_;   // This is the process the button will fire off
 

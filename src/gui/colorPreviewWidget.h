@@ -15,7 +15,6 @@ class ColorPreviewWidget : public QWidget
         explicit ColorPreviewWidget(QWidget *parent = 0);
         ColorPreviewWidget(QColor color, QWidget *parent = 0);
         ~ColorPreviewWidget();
-        void setColorList(std::vector<QColor> *colors);
         void setColor(QColor color);
         void setSelected(int selected);
         void setSelected(QColor color);
@@ -37,7 +36,6 @@ class ColorPreviewWidget : public QWidget
         QPushButton* copyTwoButton;
         QPushButton* copyThreeButton;
         QColor color;
-        std::vector<QColor>* colors;
 };
 
 #endif

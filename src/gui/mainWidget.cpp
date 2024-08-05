@@ -68,17 +68,7 @@ MainWidget::~MainWidget()
     delete selectImageButton;
     delete loadPaletteButton;
     delete colorPreview_;
-}
 
-// Handler for button click
-void MainWidget::onButtonReleased()
-{
-    // clear the text in the textBrowser and start the process
-    textBrowser_->clear();
-
-    // Set up our process to write to stdout and run our command
-    process_.setCurrentWriteChannel(QProcess::StandardOutput); // Set the write channel
-    process_.start("ls -alh ~/desktop"); // Start a terminal command
 }
 
 void MainWidget::onSelectColorButtonRelease()
@@ -93,17 +83,6 @@ void MainWidget::onSelectColorButtonRelease()
         ColorFinderWidget *colorFinder = new ColorFinderWidget(screens[i], this);
         colorFinderList.push_back(colorFinder);
     }
-}
-
-
-// This is called whenever the QProcess::readyReadStandardOutput() signal is received
-void MainWidget::onCaptureProcessOutput()
-{
-    // Determine whether the object that sent the signal was a pointer to a process
-    QProcess* process = qobject_cast<QProcess*>(sender());
-    // If so, append the output to the textbrowser
-    if (process)
-        textBrowser_->append(process->readAllStandardOutput());
 }
 
 void MainWidget::setColor()

@@ -63,7 +63,14 @@ ColorPreviewWidget::ColorPreviewWidget(QColor color, QWidget *parent) :
 
 ColorPreviewWidget::~ColorPreviewWidget()
 {
-    
+    delete colorSwatch;
+    delete lineOneEdit;
+    delete lineTwoEdit;
+    delete lineThreeEdit;
+    delete lineFourEdit;
+    delete copyOneButton;
+    delete copyTwoButton;
+    delete copyThreeButton;
 }
 
 void ColorPreviewWidget::setColor(QColor color) {
@@ -73,13 +80,6 @@ void ColorPreviewWidget::setColor(QColor color) {
     lineTwoEdit->setText(QString::fromLatin1("RGBA( %1, %2, %3, %4)").arg(color.red()).arg(color.green()).arg(color.blue()).arg(color.alphaF()));
     lineThreeEdit->setText(QString::fromLatin1("HSLA( %1, %2, %3, %4)").arg(color.hslHue()).arg(color.hslSaturation()).arg(color.value()).arg(color.alphaF()));
     lineFourEdit->setText(getColorName(color));
-}
-
-void ColorPreviewWidget::setColorList(std::vector<QColor> *colors)
-{   
-    colors = colors;
-    setStyleSheet(QString::fromLatin1(".color-swatch {background-color: %1}").arg(colors->at(0).name()));
-
 }
 
 void ColorPreviewWidget::setSelected(int selected)
@@ -95,12 +95,6 @@ void ColorPreviewWidget::setSelected(QColor color)
 void ColorPreviewWidget::setSelected(std::string colorString)
 {
 
-}
-
-void ColorPreviewWidget::updateColors()
-{
-    qDebug() << colors->at(0);
-    setStyleSheet(QString::fromLatin1("background-color: %1").arg(colors->at(0).name()));
 }
 
 void ColorPreviewWidget::onCopyOneButtonRelease()
