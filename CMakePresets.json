@@ -10,6 +10,16 @@
                 "CMAKE_BUILD_TYPE": "Debug",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "YES"
             }
+        },
+        {
+            "name": "production",
+            "description": "Production settings for color picker",
+            "hidden": false,
+            "binaryDir": "${workspaceFolder}/production",
+            "toolset": "gcc",
+            "cacheVariables": {
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "YES"
+            }
         }
     ]
 }

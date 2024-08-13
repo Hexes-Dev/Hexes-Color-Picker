@@ -5,7 +5,6 @@
 #include <QProcess>
 #include <QtGui>
 #include <iostream>
-using namespace std;
 
 class QPushButton;
 class QTextBrowser;

@@ -2,7 +2,7 @@
 #include "colorPreviewWidget.h"
 #include <QDebug>
 #include "widgetFactory.h"
-#include "../utilities/colorSpace.h";
+#include "../utilities/colorSpace.h"
 
 ColorPreviewWidget::ColorPreviewWidget(QWidget *parent) :
     QWidget(parent)
