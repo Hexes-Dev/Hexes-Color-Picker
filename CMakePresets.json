@@ -7,19 +7,18 @@
             "hidden": false,
             "binaryDir": "${workspaceFolder}/build",
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug",
-                "CMAKE_EXPORT_COMPILE_COMMANDS": "YES"
+                "CMAKE_BUILD_TYPE": "Debug"
             }
         },
         {
-            "name": "production",
-            "description": "Production settings for color picker",
+            "name": "release",
+            "description": "Release settings for color picker",
             "hidden": false,
-            "binaryDir": "${workspaceFolder}/production",
-            "toolset": "gcc",
+            "binaryDir": "${workspaceFolder}/build",
             "cacheVariables": {
-                "CMAKE_EXPORT_COMPILE_COMMANDS": "YES"
+                "CMAKE_BUILD_TYPE": "release"
             }
         }
+
     ]
 }

@@ -35,6 +35,6 @@ QLineEdit.readout {
     border: none;
     border-radius: 8px;
     margin-left: 0px;
-    color: #CECECE;
+    color: rgb(128,128,128);
     font-size: 14px;
 }

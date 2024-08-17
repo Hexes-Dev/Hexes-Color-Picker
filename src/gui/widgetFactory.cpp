@@ -28,3 +28,17 @@ QPushButton* createActionButton(QIcon icon, QString text, std::vector<std::strin
     actionButton->setProperty("class", classNames.c_str());
     return actionButton;
 }
+
+QPushButton* createActionButton(QString iconName, QString text, std::vector<std::string> classList)
+{
+
+    QStyleHints* styleHint = QGuiApplication::styleHints();
+    QString theme = styleHint->colorScheme() == Qt::ColorScheme::Dark ? "dark" : "light";
+    QPushButton* actionButton = createActionButton(QIcon(":/assets/icons/" + theme + "/" + iconName + ".svg"), text);
+    std::string classNames = "action-button";
+    for(auto className : classList) {
+        classNames.append(" " + className);
+    }
+    actionButton->setProperty("class", classNames.c_str());
+    return actionButton;
+}

@@ -23,9 +23,11 @@ ColorPreviewWidget::ColorPreviewWidget(QWidget *parent) :
     lineFourEdit = new QLineEdit("name");
     lineFourEdit->setProperty("class", "readout");
 
-    copyOneButton = createActionButton(QIcon(":/assets/icons/dark/copy.svg"), "", {"transparent"});
-    copyTwoButton = createActionButton(QIcon(":/assets/icons/dark/copy.svg"), "", {"transparent"});
-    copyThreeButton = createActionButton(QIcon(":/assets/icons/dark/copy.svg"), "", {"transparent"});
+
+    copyOneButton = createActionButton("copy", "", {"transparent"});
+    copyTwoButton = createActionButton("copy", "", {"transparent"});
+    copyThreeButton = createActionButton("copy", "", {"transparent"});
+
 
     connect(copyOneButton, &QPushButton::released, this, &ColorPreviewWidget::onCopyOneButtonRelease);
     connect(copyTwoButton, &QPushButton::released, this, &ColorPreviewWidget::onCopyTwoButtonRelease);

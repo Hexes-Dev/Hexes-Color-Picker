@@ -21,13 +21,13 @@ MainWidget::MainWidget(QWidget *parent) :
     QHBoxLayout *actionBar = new QHBoxLayout();
     actionBar->setContentsMargins(QMargins(8,8,8,0));
 
-    selectColorButton = createActionButton(QIcon(":/assets/icons/dark/color_picker.svg"), "Pick Color");
+    selectColorButton = createActionButton("color_picker", "Pick Color");
     connect(selectColorButton, &QPushButton::released, this, &MainWidget::onSelectColorButtonRelease);
 
-    selectImageButton = createActionButton(QIcon(":/assets/icons/dark/square.svg"));
+    selectImageButton = createActionButton("square");
     // TODO: Add function to select images on screen
 
-    loadPaletteButton = createActionButton(QIcon(":/assets/icons/dark/palette.svg"));
+    loadPaletteButton = createActionButton("palette");
     // TODO: Add color palette management system
 
     actionBar->addWidget(selectColorButton, 0, Qt::AlignLeft);
